@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Жүректен жүрекке — Қайырымдылыққа қосыл</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" role="region" aria-label="Қайырымдылық жобасы карточка">
+      <!-- LEFT VISUAL -->
+      <div class="visual">
+        <div class="logo">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <path d="M12 21s-7.5-4.9-9.1-8.1C0.9 9.4 4.5 5 8.4 6.4c1.6.6 2.6 2.3 3.6 3.6 1-1.3 2-3 3.6-3.6C19.5 5 23.1 9.4 21.1 12.9 19.5 16.1 12 21 12 21z" fill="#ff6b6b"/>
+          </svg>
+          <div>
+            <div class="brand">Жүректен жүрекке</div>
+            <div class="tag">Қайырымдылық жоба — бірге көмектесейік</div>
+          </div>
+        </div>
+
+        <!-- ART -->
+        <div class="art" aria-hidden>
+          <svg width="220" height="220" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img">
+            <defs>
+              <radialGradient id="g" cx="50%" cy="30%">
+                <stop offset="0%" stop-color="#fff" stop-opacity="0.9"/>
+                <stop offset="100%" stop-color="#ffe6e6" stop-opacity="1"/>
+              </radialGradient>
+            </defs>
+            <rect rx="16" width="64" height="64" fill="url(#g)"/>
+            <path d="M12 46c0-6 6-12 12-12h8c3 0 6 2 8 4 2 2 3 6 1 8-2 2-6 1-9-1-3-2-7-3-10-3-4 0-10 3-10 3" fill="#ffd2b3"/>
+            <path d="M18 36c1-4 6-6 10-4 0 0-2 3-5 3-3 0-6 1-5 1z" fill="#ffd2b3" opacity="0.95"/>
+            <g transform="translate(15,5)">
+              <path d="M17 14c0-4.4-3.6-8-8-8-2.2 0-4.2.9-5.6 2.4C1.8 9.9 1 11.9 1 14c0 4.4 7 9 15 14 8-5 15-9.6 15-14 0-2.1-.8-4.1-2.4-5.6C25.2 6.9 23.2 6 21 6c-4.4 0-8 3.6-8 8z" fill="#ff6b6b"/>
+            </g>
+          </svg>
+        </div>
+
+        <div class="welcome">
+          <h1>Жүректен жүрекке</h1>
+          <p>Біз біргеміз — кішкентай көмегң үлкен өзгеріс әкеледі. Қосыласың ба?</p>
+        </div>
+      </div>
+
+      <!-- RIGHT PANEL -->
+      <div class="panel">
+        <div class="question" id="questionBlock">
+          <h2>Қосылғың келе ме?</h2>
+          <div class="actions">
+            <button class="btn btn-yes" id="yesBtn">Иә — Қосыламын</button>
+            <button class="btn btn-no" id="noBtn">Жоқ — Кейін</button>
+          </div>
+          <div class="note">Бұл демонстрация. Мәлімет ешқайда сақталмайды.</div>
+        </div>
+
+        <!-- FORM -->
+        <div class="form-card hidden fade-in" id="formCard" aria-hidden="true">
+          <h3 style="margin:0 0 6px 0;color:#10304d">Қатысуға өтініш</h3>
+          <form id="joinForm">
+            <div>
+              <label for="name">Атың:</label>
+              <input id="name" name="name" type="text" placeholder="Мысалы: Әділет" required />
+            </div>
+            <div>
+              <label for="surname">Тегі:</label>
+              <input id="surname" name="surname" type="text" placeholder="Мысалы: Жұмабаров" required />
+            </div>
+            <div>
+              <label for="class">Сыныбың:</label>
+              <input id="class" name="class" type="text" placeholder="Мысалы: 11 Б" required />
+            </div>
+            <div>
+              <label for="goal">Мақсатың:</label>
+              <textarea id="goal" name="goal" rows="3" placeholder="Неге қатысқың келеді?" required></textarea>
+            </div>
+
+            <div class="submit-row">
+              <button type="submit" class="submit-btn">Жіберу</button>
+              <button type="button" id="cancelBtn" class="secondary">Артқа</button>
+            </div>
+            <div id="formMsg" class="note" style="display:none"></div>
+          </form>
+        </div>
+
+        <!-- NO block -->
+        <div id="noBlock" class="hidden fade-in" aria-hidden="true">
+          <div class="success">
+            <div style="font-size:20px">Жарайды 😊</div>
+            <div style="font-size:13px;color:#245d52">Келесі жолы қосылсаңыз күтеміз!</div>
+          </div>
+        </div>
+
+        <!-- SUCCESS -->
+        <div id="sentBlock" class="hidden fade-in" aria-hidden="true">
+          <div class="success">
+            <svg width="36" height="36" viewBox="0 0 24 24" aria-hidden>
+              <path d="M12 21s-7.5-4.9-9.1-8.1C0.9 9.4 4.5 5 8.4 6.4c1.6.6 2.6 2.3 3.6 3.6 1-1.3 2-3 3.6-3.6C19.5 5 23.1 9.4 21.1 12.9 19.5 16.1 12 21 12 21z" fill="#0f9d58"/>
+            </svg>
+            <div style="font-weight:800">Рахмет! Өтініміңіз қабылданды.</div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
